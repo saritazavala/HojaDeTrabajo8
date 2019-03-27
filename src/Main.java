@@ -5,14 +5,37 @@ Priority Queue
 Sistema de atención de pacientes
 29 de Marzo de 2019
 */
+
+import java.io.*;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
-        Paciente pac1 = new Paciente("sara","amor","a");
-        Paciente pac2 = new Paciente("  ","amor","1");
+        try {
+            FileReader fr = new FileReader("pacientes.txt");
+            BufferedReader br = new BufferedReader(fr);
+
+            String linea;
+
+            while((linea = br.readLine()) != null) {
+                String[] parts = linea.split(",");
+                String nombreL = parts[0]; // 123
+                String enfermedadL= parts[1]; // 654321
+                String categoriaL= parts[2];//
+               
+
+            }
 
 
-        System.out.println( pac1.compareTo(pac2));
+            fr.close();
+        }
+        catch(Exception e) {
+            System.out.println("Excepcion leyendo fichero "+ "pacientes" + ": " + e);
+        }
+
+
+
 
     }
 }
