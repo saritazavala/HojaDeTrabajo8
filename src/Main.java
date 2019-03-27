@@ -23,7 +23,7 @@ public class Main {
                 String nombreL = parts[0]; // 123
                 String enfermedadL= parts[1]; // 654321
                 String categoriaL= parts[2];//
-               
+
 
             }
 
