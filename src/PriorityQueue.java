@@ -14,7 +14,7 @@ public interface PriorityQueue<E extends Comparable<E>>
     public E getFirst();
 
     // pre: !isEmpty()
-    // post: returns the minimum value in priority queue
+    // post: returns the minimum value   in priority queue
 
     public E remove();
     // pre: !isEmpty()
