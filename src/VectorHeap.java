@@ -8,27 +8,6 @@ Sistema de atención de pacientes
 import java.util.Vector;
 
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
-    @Override
-    public String toString() {
-        return "VectorHeap{" +
-                "data=" + data +
-                '}';
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return data.isEmpty();
-    }
-
-    @Override
-    public int size() {
-        return data.size();
-    }
-
-    @Override
-    public void clear() {
-
-    }
 
     protected Vector<E> data; // the data, kept in heap order
 
@@ -91,9 +70,9 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
     }
 
     protected void pushDownRoot(int root)
-// pre: 0 <= root < size
-// post: moves node at index root down
-// to appropriate position in subtree
+    // pre: 0 <= root < size
+    // post: moves node at index root down
+    // to appropriate position in subtree
     {
         int heapSize = data.size();
         E value = data.get(root);
@@ -107,7 +86,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
                 {
                     childpos++;
                 }
-// Assert: childpos indexes smaller of two children
+                // Assert: childpos indexes smaller of two children
                 if ((data.get(childpos)).compareTo
                         (value) < 0)
                 {
@@ -128,6 +107,28 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
     @Override
     public E getFirst() {
         return data.get(0);
+    }
+
+    @Override
+    public String toString() {
+        return "VectorHeap{" +
+                "data=" + data +
+                '}';
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return data.isEmpty();
+    }
+
+    @Override
+    public int size() {
+        return data.size();
+    }
+
+    @Override
+    public void clear() {
+
     }
 
     public E remove()

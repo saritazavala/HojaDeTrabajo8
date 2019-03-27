@@ -22,13 +22,18 @@ public class Main {
 
             while((linea = br.readLine()) != null) {
                 String[] parts = linea.split(",");
-                String nombreL = parts[0]; // 123
-                String enfermedadL= parts[1]; // 654321
+                String nombreL = parts[0]; //
+                String enfermedadL= parts[1]; //
                 String categoriaL= parts[2];//
 
                 pacienteVectorHeap.add(new Paciente(nombreL,enfermedadL,categoriaL));
+                System.out.println(pacienteVectorHeap);
+                System.out.println("=====================================================");
+                System.out.println("=====================================================");
 
-
+            }
+            while (pacienteVectorHeap.size()>0){
+                System.out.println(pacienteVectorHeap.remove());
 
             }
 
