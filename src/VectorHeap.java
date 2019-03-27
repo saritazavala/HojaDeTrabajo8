@@ -1,9 +1,37 @@
+/*
+SaraZavala 18893
+Estructura de Datos
+Priority Queue
+Sistema de atención de pacientes
+29 de Marzo de 2019
+*/
 import java.util.Vector;
 
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
+    @Override
+    public String toString() {
+        return "VectorHeap{" +
+                "data=" + data +
+                '}';
+    }
 
+    @Override
+    public boolean isEmpty() {
+        return data.isEmpty();
+    }
+
+    @Override
+    public int size() {
+        return data.size();
+    }
+
+    @Override
+    public void clear() {
+
+    }
 
     protected Vector<E> data; // the data, kept in heap order
+
     public VectorHeap() {
         data = new Vector<E>();
     }
@@ -14,21 +42,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
     {
         data.add(value);
         percolateUp(data.size()-1);
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return data.isEmpty();
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public void clear() {
-
     }
 
 
@@ -114,7 +127,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
 
     @Override
     public E getFirst() {
-        return null;
+        return data.get(0);
     }
 
     public E remove()

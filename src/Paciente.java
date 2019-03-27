@@ -32,7 +32,7 @@ public class Paciente implements Comparable<Paciente> {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+            this.nombre = nombre;
     }
 
     public String getEnfermedad() {
