@@ -45,6 +45,7 @@ public class Main {
                 while (pacienteVectorHeap.size()>0){
 
                     System.out.println(pacienteVectorHeap.remove());
+
                 }
                 fr.close();
             }
@@ -69,13 +70,9 @@ public class Main {
 
                     pacientePriorityQueue.add(new Paciente(nombreL,enfermedadL,categoriaL));
 
-                    while (pacientePriorityQueue.size()>0){
-
-                        System.out.println(pacientePriorityQueue.remove());
-                    }
-
-
-
+                }
+                while (pacientePriorityQueue.size()>0){
+                    System.out.println(pacientePriorityQueue.remove());
                 }
 
                 fr.close();
