@@ -51,11 +51,13 @@ public class Paciente implements Comparable<Paciente> {
         this.categoria = categoria;
     }
 
+    //Compare To para comparar el tipo de categoria de nuestros pacientes
     @Override
     public int compareTo(Paciente o) {
         return categoria.compareTo(o.categoria);
     }
 
+    //To String para imprimir todo en orden
     @Override
     public String toString() {
         return "Paciente:" +

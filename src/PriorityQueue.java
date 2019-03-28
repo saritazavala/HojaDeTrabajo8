@@ -8,7 +8,7 @@ Sistema de atención de pacientes
 
 //Codigo tomado de Libro de texto utilizado en clase. JavaStructures
 
-
+//Referencias al final
 public interface PriorityQueue<E extends Comparable<E>>
 {
     public E getFirst();
@@ -33,3 +33,8 @@ public interface PriorityQueue<E extends Comparable<E>>
     public void clear();
     // post: removes all elements from queue
 }
+/*
+Este codigo fue tomado y modificado de acuerdo a las necesidades de
+esta hoja. Fue extraido del libro utilizado en clase. Java Structures
+Java Structures, Duane A. Bailey,Williams College (September 2007)
+* */
